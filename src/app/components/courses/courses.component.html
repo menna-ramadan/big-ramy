@@ -1,0 +1,36 @@
+<div class="row overflow-hidden p-5">
+  <p class="m-auto fs-2">SEE LATEST COURSES</p>
+  <div class="col-lg-4 col-12 mb-2" style="width: 30%" *ngFor="let course of courses">
+    <!-- | paginate
+    : {
+        id: 'pageId',
+        itemsPerPage: 6,
+        currentPage: pageObject.paging.PageNumber,
+        totalItems: totalCount
+      }     // pagination library    -->
+    <div class="d-flex px-2 py-2 rounded" style="background-color: #29292b">
+      <div>
+        <div class="">
+          <img
+            [src]="
+              'http://3.65.32.166' +
+              'https://bigramy.s3.eu-central-1.amazonaws.com/development/JHSBpBkoiEbA_sndakUFMQ_1669815996.jpg'
+            "
+            alt=""
+            srcset=""
+          />
+          <p class="me-2 mb-0 fs-5">{{ course.attributes.name }}</p>
+          <p class="ms-2 mb-0 text-muted">
+            {{ course.attributes.available_on | date : 'mediumDate' }}
+          </p>
+          <p>{{ course.attributes.course.description }}</p>
+        </div>
+
+        <p>{{ course.attributes.compare_at_price }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-end mx-3"></div>
+  <p-paginator [rows]="5" [totalRecords]="10" (onPageChange)="($event)"></p-paginator>
+</div>
