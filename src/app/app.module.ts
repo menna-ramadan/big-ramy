@@ -17,7 +17,6 @@ import { TabViewModule } from 'primeng/tabview';
 import { VideoEmbedComponent } from './components/video-embed/video-embed.component';
 import { ImageModule } from 'primeng/image';
 import { CarouselModule } from 'primeng/carousel';
-
 import { InputTextModule } from 'primeng/inputtext';
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
 import { CoursesComponent } from './components/courses/courses.component';
@@ -28,10 +27,8 @@ import { AboutComponent } from './components/about/about.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-
     SliderComponent,
     VideoEmbedComponent,
-
     LatestNewsComponent,
     CoursesComponent,
     AboutComponent
